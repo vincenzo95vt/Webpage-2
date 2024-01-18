@@ -1,13 +1,6 @@
+@import url("rules.css");
 @import url("reset.css");
 @import url("header.css");
-:root{
-    --primary-font : "Arial";
-    --primary-color : #447cad;
-    --other-header-color: #3C6E99;
-    --secondary-color : white;
-    --terciary-color : black;
-    --h2-letter-color: #7777;
-}
 
 body {
     font-family: var(--primary-font);
@@ -34,28 +27,26 @@ main{
     }
     .container-info-film {
         height: auto;
-        width: 100%;
-        max-width: 1000px;
+        width: 1000px;
+        min-width: 1000px;
         position: relative;
         background-color: var(--secondary-color);
         color: var(--terciary-color);
-        h2 {
-            font-weight: bold;
-            padding: 0px;
-            margin-bottom: 13px;
-        }
         padding: 20px;
         margin-top: 20%;
-        div {
-            .name {
-                font-size: 1.5em;
+        .name-and-options {
+            h2 {
+                font-size: 2em;
                 padding: 13px;
-            };
-            ul {
+                font-weight: bold;
+                padding: 0px;
+                margin-bottom: 13px;
+            }
+            >ul {
                 display: flex;
-                justify-content: space-between;
+                gap: 200px;
             }            
-            padding-right: 419px;
+            
         }        
     };
 
@@ -67,32 +58,38 @@ main{
         margin-inline: 0;
         top: 100px;
         background-color: var(--primary-color);
-        justify-content: ;
-    };
-    .info {
-        div {
+    }
+    .info { 
+        .title, .year, .direction, .cast-info, .bso, 
+        .photography, .genre, .synopsis, .trailers, 
+        .awards, .reviews, .input {
             display: grid;
             grid-template-columns: 100px 300px;
-            grid-template-rows: 1fr;
-            margin: 50px;
-            justify-content: left;
-            gap: 25px;
-            align-items: top;
-            :first-child{
+            gap: 10px;
+            margin-bottom: 20px;
+            h3 {
                 justify-self: end;
-                color:var(--h2-letter-color);
-                font-weight: 300;
-            }
-            .cast {
-                position: relative;
-                left: 50%;
-                gap: 25px;
-                li img{
-                    width: 100px;
-                    border-radius: 8px;
-                    box-shadow: 5px 1px 15px;
-                }
-            }
+                color: var(--h2-letter-color);
+            }            
+        }
+        .synopsis p{
+            width: 700px;
+        }
+        display: block;
+        margin: 50px;
+        justify-content: right;
+        gap: 25px;
+        align-items: top;
+        
+        .cast {
+            display: flex;
+            left: 50%;
+            gap: 25px;
+            li img{
+                width: 100px;
+                border-radius: 8px;
+                box-shadow: 5px 1px 15px;
+            } 
         }
     }
 }
