@@ -6,6 +6,7 @@
     --other-header-color: #3C6E99;
     --secondary-color : white;
     --terciary-color : black;
+    --h2-letter-color: #7777;
 }
 
 body {
@@ -31,22 +32,69 @@ main{
     section{
         margin: 0 auto;
     }
-    .container-info-film{
+    .container-info-film {
         height: auto;
         width: 100%;
-        max-width: 1200px;
+        max-width: 1000px;
+        position: relative;
         background-color: var(--secondary-color);
         color: var(--terciary-color);
+        h2 {
+            font-weight: bold;
+            padding: 0px;
+            margin-bottom: 13px;
+        }
+        padding: 20px;
         margin-top: 20%;
-        .name {
-            font-size: 1.5em;
-            padding: 13px;
-        };
-        ul {
-            display: flex;
-            justify-content: space-around
-        };
-        
+        div {
+            .name {
+                font-size: 1.5em;
+                padding: 13px;
+            };
+            ul {
+                display: flex;
+                justify-content: space-between;
+            }            
+            padding-right: 419px;
+        }        
+    };
+
+    .info::before{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 95%;
+        margin-inline: 0;
+        top: 100px;
+        background-color: var(--primary-color);
+        justify-content: ;
+    };
+    .info {
+        div {
+            display: grid;
+            grid-template-columns: 100px 300px;
+            grid-template-rows: 1fr;
+            margin: 50px;
+            justify-content: left;
+            gap: 25px;
+            align-items: top;
+            :first-child{
+                justify-self: end;
+                color:var(--h2-letter-color);
+                font-weight: 300;
+            }
+            .cast {
+                position: relative;
+                left: 50%;
+                gap: 25px;
+                li img{
+                    width: 100px;
+                    border-radius: 8px;
+                    box-shadow: 5px 1px 15px;
+                }
+            }
+        }
     }
 }
+
 
