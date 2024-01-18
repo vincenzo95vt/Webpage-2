@@ -34,22 +34,28 @@ main{
         color: var(--terciary-color);
         padding: 20px;
         margin-top: 20%;
+        box-shadow: 0px 2px 37px;
+        border-radius: 7px;
         .name-and-options {
+            margin-left: 50px;
             h2 {
                 font-size: 2em;
                 padding: 13px;
-                font-weight: bold;
+                font-weight: normal;
                 padding: 0px;
                 margin-bottom: 13px;
             }
-            >ul {
+            .options {
                 display: flex;
-                gap: 200px;
+                gap: 100px;
+                color: var(--primary-color);
+                li a:hover {
+                    text-decoration: underline;
+                }
             }            
             
         }        
     };
-
     .info::before{
         content: "";
         position: absolute;
@@ -58,10 +64,17 @@ main{
         margin-inline: 0;
         top: 100px;
         background-color: var(--primary-color);
+        left: 50%;
+        transform: translateX(-50%);
     }
     .info { 
+        display: block;
+        margin: 50px;
+        justify-content: right;
+        gap: 25px;
+        align-items: top;
         .title, .year, .direction, .cast-info, .bso, 
-        .photography, .genre, .synopsis, .trailers, 
+        .photography, .genre, .synopsis, .trailer, 
         .awards, .reviews, .input {
             display: grid;
             grid-template-columns: 100px 300px;
@@ -75,12 +88,6 @@ main{
         .synopsis p{
             width: 700px;
         }
-        display: block;
-        margin: 50px;
-        justify-content: right;
-        gap: 25px;
-        align-items: top;
-        
         .cast {
             display: flex;
             left: 50%;
@@ -88,8 +95,107 @@ main{
             li img{
                 width: 100px;
                 border-radius: 8px;
-                box-shadow: 5px 1px 15px;
+                box-shadow: 5px 1px 10px gray;
             } 
+        }
+        .awards ul{
+            display: inline-block;
+            width: 700px;
+            li {
+                display: flex;
+                margin-bottom: 13px;
+                a {
+                    margin-right: 10px;
+                    color: var(--primary-color);
+                    &:hover{
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .reviews ul li{
+            width: 700px;
+            height: 100px;
+            text-align: justify;
+            p {
+                font-size: 17px;
+            }
+            h4 {
+                display: flex;
+                justify-content: end;
+                font-style: italic;
+                font-weight:normal;
+                font-size: 14px;
+                &::after{
+                    content: "";
+                    position: relative;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                    background-color: green;
+                    margin-left: 5px;
+                    top: -5px;
+                }
+            }
+        }
+        .input input{
+            width: 530px;
+            height: 90px;
+            border-radius: 5px;
+        }
+    }
+    aside {
+        position: absolute;
+        left: 100%;
+        top: 8%;
+        padding-right: 15px;
+        transform: translateX(-100%);
+        display: block;
+        justify-content: right;
+        > img {
+            border-radius: 8px;
+            box-shadow: 5px 1px 10px gray;
+            width: 162px;
+            height: 255px;
+            margin-bottom: 30px;
+        }
+        .aside-mark-info {
+            >img{
+                background-color: white;
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            padding: 10px;
+            background-color: #F0F0F0;
+            border: 1px solid #CDDCEB;
+            .mark-and-votes{
+                display: flex;
+                gap: 5px;
+                .mark{
+                    display: flex;
+                    width: 50px;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 15px;
+                    h3{
+                        font-size: 205%;
+                    }
+                }
+                .votes {
+                    display: flex;
+                    background-color: white;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid var(--primary-color);
+                }
+            }
+        }
+        svg {
+            max-width: 50px;
+            max-height: 50px;
         }
     }
 }

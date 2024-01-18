@@ -7,25 +7,30 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <header>
-        <section>
-            <div class="header-top">
-                <img src="/logo4.png" alt="">
-                <input type="search" name="" id="" placeholder="Search">
-                <p><a href="">Sign in</a> / <a href="">Sign up</a></p>
-            </div>
-            <div class="header-bottom">
-                <ul>
-                    <li><a href="">Top 2023 Films</a></li>
-                    <li><a href="">Top best films of the decade</a></li>
-                    <li><a href="">2024 Movies</a></li>
-                    <li><a href="">Next premieres</a></li>
-                    <li><a href="">Tell us your favorite movie</a></li>
-                    <li><a href="">Cinema's curiosities</a></li>
-                </ul>
-            </div>
-        </section>
-    </header>
+    <div class="bg-header">
+        <header>
+            <section class="top-fixed">    
+                <div class="header-top">
+                    <img src="/logo4.png" alt="">
+                    <input type="search" name="" id="" placeholder="Search">
+                    <p><a href="">Sign in</a> / <a href="">Sign up</a></p>
+                </div>
+            </section>
+   
+            <section class="bottom-relative">
+                <div class="header-bottom">
+                    <ul>
+                        <li><a href="">Top 2023 Films</a></li>
+                        <li><a href="">Top best films of the decade</a></li>
+                        <li><a href="">2024 Movies</a></li>
+                        <li><a href="">Next premieres</a></li>
+                        <li><a href="">Tell us your favorite movie</a></li>
+                        <li><a href="">Cinema's curiosities</a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+    </div>    
     <main>
         <section>
             <div class="container-info-film">
@@ -107,14 +112,18 @@
                 </div>
                 <aside>
                     <img src="https://pics.filmaffinity.com/oppenheimer-828933592-mmed.jpg" alt="">
-                    <div>
+                    <div class="aside-mark-info">
                         <img src="https://filmaffinity.com/images/ratings/8.png" alt="">
-                        <div>
-                            <h3>7.5</h3>
+                        <div class="mark-and-votes">
+                            <div class="mark">
+                                <h3>7.5</h3>
+                            </div>
+                            <div class="votes">
+                                <h3>31700 votations</h3>
+                            </div>
                         </div>
-                        <div>
-                            <h3>31700 votations</h3>
-                        </div>
+                    </div>
+                    <div class="streaming-platforms">
                         <div>
                             <h3>Available on</h3>
                             <div>
