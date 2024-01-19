@@ -15,16 +15,40 @@ header {
             text-align: center;
             align-items: center;
             justify-items: center;
+            padding-bottom: 10px;
             img {
+                position: relative;
+                top:5px;
                 width: 20%;
                 height: 15%;
+                &:hover{
+                    cursor: pointer;
+                }
             }
-            input {
-                width: 450px;
-                height:35px;
-                border-radius:8px;
-                font-size: 20px;
-                font-weight: 200;
+            .container-search{
+                position: relative;
+                input {
+                    width: 450px;
+                    height: 35px;
+                    border-radius:8px;
+                    font-size: 20px;
+                    font-weight: 200;
+                    border: 0px solid ;
+                }
+                &::after{
+                    position: absolute;
+                    font-size: 12px;
+                    width: 150px;
+                    top: 105%;
+                    right: -20px;
+                    content: "Advanced Search >>";
+                    background-color: var(--primary-color);
+                    fill: var(--secondary-color);
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--h2-letter-color)
+                    }
+                }
             }
             p a{
                 font-weight: bold;
@@ -47,13 +71,18 @@ header {
             display: flex;
             position: absolute;
             gap: 20px;
-            li a::after {
-               content : "";
-               background-color: gold;
-               position: absolute;
-               margin-left: 10px;
-               height: 15px;
-               width: 1px;
+            li a{
+                &:hover{
+                    color: var(--color-hover);
+                }
+                &::after {
+                   content : "";
+                   background-color: var(--color-hover);
+                   position: absolute;
+                   margin-left: 10px;
+                   height: 15px;
+                   width: 1px;
+                }
             }
         }   
     }

@@ -5,4 +5,18 @@
     --secondary-color : white;
     --terciary-color : black;
     --h2-letter-color: #7777;
+    --color-hover: gold;
+    --bg-aside: #F0F0F0;
+    --border-box-aside-color: #CDDCEB;
+}
+@keyframes change-color {
+    0% {
+        background-color: var(--secondary-color);
+    }
+    50%{
+        background-color: green
+    }
+    100% {
+        background-color: var(--secondary-color);
+    }
 }
