@@ -1,7 +1,7 @@
 .bg-header{
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 5;
 }
 header {
     .top-fixed {
@@ -16,6 +16,7 @@ header {
             align-items: center;
             justify-items: center;
             padding-bottom: 10px;
+            z-index: 1;
             img {
                 position: relative;
                 top:5px;
@@ -74,6 +75,7 @@ header {
             li a{
                 &:hover{
                     color: var(--color-hover);
+                    transition: 0.5s;
                 }
                 &::after {
                    content : "";

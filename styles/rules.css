@@ -5,9 +5,11 @@
     --secondary-color : white;
     --terciary-color : black;
     --h2-letter-color: #7777;
+    --color-info-film: #4e4e4e;
     --color-hover: gold;
     --bg-aside: #F0F0F0;
     --border-box-aside-color: #CDDCEB;
+    --h2-secondary-color:#666666;
 }
 @keyframes change-color {
     0% {
