@@ -5,7 +5,7 @@
     --secondary-color : white;
     --terciary-color : black;
     --h2-letter-color: #7777;
-    --color-info-film: #4e4e4e;
+    --color-info-film: #4e4e4e;     
     --color-hover: gold;
     --bg-aside: #F0F0F0;
     --border-box-aside-color: #CDDCEB;
@@ -21,4 +21,8 @@
     100% {
         background-color: var(--secondary-color);
     }
+}
+@font-face {
+    font-family: "Lobster";
+    src: url(../fonts/Lobster/Lobster-Regular.ttf);
 }

@@ -1,14 +1,10 @@
 main {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.8)), url(../cillian_murphy_robert_downey_jr__florence_pugh_jack_quaid_emily_blunt_rami_malek_4k_5k_hd_oppenheimer.jpg);
-  background-size: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+ 
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0;
+  margin-inline: 0;
   section {
-    margin: 0 auto;
+    margin-inline: 0;
     .other{
       background-color: var(--bg-aside);
       position: absolute;
@@ -26,20 +22,41 @@ main {
         h2{
           margin-bottom: 10px;
           color: var(--h2-secondary-color);
-          font-size: 1.2rem;
+          font-size: 1.10rem;
         }
         ul li{
           margin-bottom: 10px;
           a{
+            display: block;
+            max-width: fit-content;
             color: var(--primary-color);
-            font-size: 13px;
+            font-size: 12.5px;
+            &::after{
+              content: "";
+              display: flex;
+              position: relative;
+              bottom: -3px;
+              left: 0px;
+              max-width: 0%;
+              height: 2px;
+              transform-origin: left;
+              background-color: var(--primary-color);
+              transition: 0.5s ease;
+            }
+            &:hover::after{
+              display: flex;
+              position: relative;
+              max-width: 100%;
+              display: flex;  
+            }
           }
         }
       }
     }
     .container-info-film {
       height: auto;
-      width: 1000px;
+      width: 100%;
+      max-width: 100%;
       min-width: 1000px;
       position: relative;
       background-color: var(--secondary-color);
@@ -74,13 +91,13 @@ main {
             height: 2px;
             transform-origin: left;
             background-color: var(--primary-color);
-            transition: 0.5s ease;
+            transition: 0.5s ease-out;
           }
           li a:hover::after {
               display: flex;
               width: 100%;
             }
-          &::after{
+            &::after{
             content: "Cartelera España 20/07/2023";
             position: relative;
             display: inline-block;
@@ -88,7 +105,7 @@ main {
             left: 40%;
             transform: translateX(-40%);
             font-style: italic;
-            
+            }
           }
         }
       }
@@ -134,13 +151,66 @@ main {
     }
     .direction a{
       color: var(--primary-color);
+      max-width: fit-content;
+      &::after{
+        display: block;
+        content: "";
+        position: relative;
+        transition: 0.3s ease-out;
+        width: 0%;
+        height: 2px;
+        transform-origin: left;
+        background-color: var(--primary-color);
+      }
+      &:hover{
+        cursor: pointer;
+        &::after{
+          width: 100%;
+          display: block;
+        }
+      }
 
     }
     .bso a {
       color: var(--primary-color);
+      max-width: fit-content;
+      &::after{
+        content:"";
+        display: block;
+        position: relative;
+        width: 0%;
+        height: 2px;
+        background-color: var(--primary-color);
+        transform-origin: left;
+        transition: 0.3s ease-out;
+      }
+      &:hover{
+        cursor: pointer;
+        &::after{
+          width: 100%;
+          display: block;
+        }
+      }
     }
     .photography a{
       color: var(--primary-color);
+      &::after{
+        content: "";
+        background-color: var(--primary-color);
+        display: block;
+        position: relative;
+        transform-origin: left;
+        transition: 0.3s ease-out;
+        width: 0%;
+        height: 2px;
+      }
+      &:hover{
+        cursor: pointer;
+        &::after {
+          width: 100%;
+          display: block;
+        }
+      }
     }
     .synopsis p {
       text-align: justify;
@@ -177,9 +247,9 @@ main {
                 bottom: -1px;
                 left: 0px;
                 width: 0%;
-                height: 1px;
+                height: 2px;
                 background-color: var(--primary-color);
-                transition:0.5s ease;
+                transition:0.5s ease-out;
                 transform-origin: left;
             }
             &:hover {
@@ -247,11 +317,16 @@ main {
         }
       }
     }
-    input {
+    .submit {
         grid-column: 2;
         width: 25%;
         justify-self: end;
+        background-color: var(--primary-color);
+        border: 1px solid var(--color-info-film);
+        color: var(--secondary-color);
+        border-radius: 3px;
       }
+      
   }
   aside {
     position: absolute;
@@ -348,8 +423,10 @@ main {
         display: flex;
         justify-content: center;
         margin-top: 5px;
-        a svg path:hover {
+        a svg:hover {
+          transition: 0.3s;
           cursor: pointer;
+          filter: drop-shadow(2px 2px 5px gray);
         }
       }
       .available {
@@ -357,6 +434,9 @@ main {
         background-color: var(--bg-aside);
         display: flex;
         padding: 5px;
+        h3 {
+          font-weight: bold;
+        }
       }
       .logo-platforms {
         display: inline-flex;
@@ -364,4 +444,4 @@ main {
       }
     }
   }
-}
+
