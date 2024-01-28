@@ -350,7 +350,7 @@ main {
         display: inline-block;
         position: absolute;
         content: "";
-        background-image: url(../211801_play_icon.svg);
+        background-image: url(../Images/211801_play_icon.svg);
         background-size: cover;
         background-position-x: 2px;
         width: 35px;
@@ -412,7 +412,7 @@ main {
           img {
             justify-content: center;
             position: absolute;
-            left: -12px;
+            left: -17px;
           }
         }
       }
