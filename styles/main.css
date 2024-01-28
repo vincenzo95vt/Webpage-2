@@ -1,0 +1,447 @@
+main {
+ 
+  display: flex;
+  justify-content: center;
+  margin-inline: 0;
+  section {
+    margin-inline: 0;
+    .other{
+      background-color: var(--bg-aside);
+      position: absolute;
+      width: 150px;
+      height: 100%;
+      top: 434px;
+      transform: translateX(-75%);
+      border-color: var(--border-box-aside-color);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 4px -2px 20px gray;
+      z-index: 1;
+      div {
+        margin-bottom: 40px;
+        h2{
+          margin-bottom: 10px;
+          color: var(--h2-secondary-color);
+          font-size: 1.10rem;
+        }
+        ul li{
+          margin-bottom: 10px;
+          a{
+            display: block;
+            max-width: fit-content;
+            color: var(--primary-color);
+            font-size: 12.5px;
+            &::after{
+              content: "";
+              display: flex;
+              position: relative;
+              bottom: -3px;
+              left: 0px;
+              max-width: 0%;
+              height: 2px;
+              transform-origin: left;
+              background-color: var(--primary-color);
+              transition: 0.5s ease;
+            }
+            &:hover::after{
+              display: flex;
+              position: relative;
+              max-width: 100%;
+              display: flex;  
+            }
+          }
+        }
+      }
+    }
+    .container-info-film {
+      height: auto;
+      width: 100%;
+      max-width: 100%;
+      min-width: 1000px;
+      position: relative;
+      background-color: var(--secondary-color);
+      color: var(--color-info-film);
+      padding: 20px;
+      margin-top: 20%;
+      box-shadow: 0px 2px 37px;
+      border-radius: 7px;
+      z-index: 0;
+      .name-and-options {
+        margin-left: 50px;
+        h2 {
+          font-size: 1.75em;
+          padding: 13px;
+          font-weight: normal;
+          padding: 0px;
+          margin-bottom: 13px;
+        }
+        .options {
+          display: flex;
+          position: relative;
+          top: 15px;
+          gap: 30px;
+          color: var(--primary-color);
+          li a::after {
+            content: "";
+            display: flex;
+            position: relative;
+            bottom: -3px;
+            left: 0px;
+            width: 0%;
+            height: 2px;
+            transform-origin: left;
+            background-color: var(--primary-color);
+            transition: 0.5s ease-out;
+          }
+          li a:hover::after {
+              display: flex;
+              width: 100%;
+            }
+            &::after{
+            content: "Cartelera España 20/07/2023";
+            position: relative;
+            display: inline-block;
+            font-size: 0.75rem;
+            left: 40%;
+            transform: translateX(-40%);
+            font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+  .info::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 95%;
+    margin-inline: 0;
+    top: 100px;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .info {
+    display: block;
+    margin: 50px;
+    justify-content: right;
+    gap: 25px;
+    align-items: top;
+    .title,
+    .year,
+    .direction,
+    .cast-info,
+    .bso,
+    .photography,
+    .genre,
+    .synopsis,
+    .trailer,
+    .awards,
+    .reviews,
+    .input {
+      display: grid;
+      grid-template-columns: 100px 605px;
+      gap: 10px;
+      margin-bottom: 20px;
+      h3 {
+        justify-self: end;
+        color: var(--h2-letter-color);
+      }
+    }
+    .direction a{
+      color: var(--primary-color);
+      max-width: fit-content;
+      &::after{
+        display: block;
+        content: "";
+        position: relative;
+        transition: 0.3s ease-out;
+        width: 0%;
+        height: 2px;
+        transform-origin: left;
+        background-color: var(--primary-color);
+      }
+      &:hover{
+        cursor: pointer;
+        &::after{
+          width: 100%;
+          display: block;
+        }
+      }
+
+    }
+    .bso a {
+      color: var(--primary-color);
+      max-width: fit-content;
+      &::after{
+        content:"";
+        display: block;
+        position: relative;
+        width: 0%;
+        height: 2px;
+        background-color: var(--primary-color);
+        transform-origin: left;
+        transition: 0.3s ease-out;
+      }
+      &:hover{
+        cursor: pointer;
+        &::after{
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+    .photography a{
+      color: var(--primary-color);
+      &::after{
+        content: "";
+        background-color: var(--primary-color);
+        display: block;
+        position: relative;
+        transform-origin: left;
+        transition: 0.3s ease-out;
+        width: 0%;
+        height: 2px;
+      }
+      &:hover{
+        cursor: pointer;
+        &::after {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+    .synopsis p {
+      text-align: justify;
+    }
+    .cast {
+      display: flex;
+      font-size: 12px;
+      left: 50%;
+      gap: 0px;
+      li {
+        margin: 10px;
+        display: inline-block;
+        justify-items: center;
+        img {
+            width: 100px;
+            border: 1px solid var(--secondary-color);
+            margin-bottom: 5px;
+            border-radius: 8px;
+            box-shadow: 5px 1px 10px gray;
+            transition: 0.5s;
+            &:hover{
+                cursor: pointer;
+            }
+          }
+        }
+        a {
+            display: inline;
+            position: relative;
+            color: var(--primary-color);
+            &::after{
+                content: "";
+                display: inline-flex;
+                position: absolute;
+                bottom: -1px;
+                left: 0px;
+                width: 0%;
+                height: 2px;
+                background-color: var(--primary-color);
+                transition:0.5s ease-out;
+                transform-origin: left;
+            }
+            &:hover {
+                cursor: pointer;
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+    .awards ul {
+      display: inline-block;
+      li {
+        display: flex;
+        margin-bottom: 13px;
+        a {
+          margin-right: 10px;
+          color: var(--primary-color);
+          &::after{
+            content: "";
+            display: inline-flex;
+            position: absolute;
+            bottom: -1px;
+            left: 0px;
+            width: 0%;
+            height: 1px;
+            background-color: var(--primary-color);
+            transition:0.5s ease;
+            transform-origin: left;
+            }
+          &:hover {
+            cursor: pointer;
+                &::after {
+                    width: 100%;
+                }
+          }
+        }
+      }
+    }
+    .trailer iframe {
+      border-radius: 5px;
+    }
+    .reviews ul li {
+      height: 100px;
+      text-align: justify;
+      p {
+        font-size: 15px;
+      }
+      h4 {
+        display: flex;
+        justify-content: end;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 13px;
+        &::after {
+          content: "";
+          position: relative;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          animation: change-color 2s infinite;          
+          margin-left: 5px;
+          top: -3px;
+        }
+      }
+    }
+    .submit {
+        grid-column: 2;
+        width: 25%;
+        justify-self: end;
+        background-color: var(--primary-color);
+        border: 1px solid var(--color-info-film);
+        color: var(--secondary-color);
+        border-radius: 3px;
+      }
+      
+  }
+  aside {
+    position: absolute;
+    left: 100%;
+    top: 8%;
+    padding-right: 15px;
+    transform: translateX(-100%);
+    display: block;
+    justify-content: right;
+    .opph-img {
+      position: relative;
+      > img {
+        border-radius: 8px;
+        box-shadow: 5px 1px 10px gray;
+        width: 162px;
+        height: 255px;
+        margin-bottom: 30px;
+        border: 1px solid white;
+      }
+      &::after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        background-image: url(../Images/211801_play_icon.svg);
+        background-size: cover;
+        background-position-x: 2px;
+        width: 35px;
+        height: 35px;
+        left: 105%;
+        transform: translate(-100%);
+        bottom: 21px;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: var(--primary-color);
+      }
+    }
+    .aside-mark-info {
+      > img {
+        background-color: white;
+        position: relative;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        border: 2px solid white;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      padding: 10px;
+      background-color: #f0f0f0 ;
+      border: 1px solid #cddceb ;
+      margin-bottom: 30px;
+      .mark-and-votes {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+        .mark {
+          display: flex;
+          width: 50px;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--primary-color);
+          color: white;
+          padding: 15px;
+          h3 {
+            font-size: 205%;
+          }
+        }
+        .votes {
+          display: flex;
+          background-color: white;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid var(--primary-color);
+          h3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--primary-color);
+            font-weight: bold;
+          }
+        }
+        .graphic {
+          img {
+            justify-content: center;
+            position: absolute;
+            left: -17px;
+          }
+        }
+      }
+    }
+    .streaming-platforms {
+      border: 1px solid var(--border-box-aside-color);
+      ul li {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        a svg:hover {
+          transition: 0.3s;
+          cursor: pointer;
+          filter: drop-shadow(2px 2px 5px gray);
+        }
+      }
+      .available {
+        justify-content: center;
+        background-color: var(--bg-aside);
+        display: flex;
+        padding: 5px;
+        h3 {
+          font-weight: bold;
+        }
+      }
+      .logo-platforms {
+        display: inline-flex;
+        justify-content: center;
+      }
+    }
+  }
+
